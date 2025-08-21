@@ -53,8 +53,6 @@ export const signup = async (req: any, res: any) => {
 export const login = async (req: any, res: any) => {
   const { email, password } = req.body.data;
 
-  console.log('FROM BACKEND', req.body.data);
-
   try {
     if (!email || !password)
       return res.status(400).json({ message: 'All fields are required' });
@@ -101,3 +99,13 @@ export const checkAuth = (req: any, res: any) => {
     res.status(400).json({ message: 'Internal Server Error' });
   }
 };
+
+/**
+ * to do list:
+ * cookie()
+ * if yes,
+ *
+ * add validation in authUser. (if merong cookie)
+ *
+ * check if may cookie, if meron, basta
+ */
