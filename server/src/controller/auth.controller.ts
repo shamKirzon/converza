@@ -7,7 +7,7 @@ import { error } from 'console';
 export const signup = async (req: any, res: any) => {
   const { email, fullName, password } = req.body.data;
   console.log(req.body.data);
-  console.log(email, fullName, password);
+  console.log(email, fullName, password, '');
 
   try {
     if (!email || !fullName || !password)
